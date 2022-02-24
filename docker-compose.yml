@@ -1,0 +1,7 @@
+version: '3'
+services:
+  peskov-bot:
+    build: .
+    environment:
+      - PESKOVBOT_BOTAPIURL
+      - PESKOVBOT_BOTTOKEN
