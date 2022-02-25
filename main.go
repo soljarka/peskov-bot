@@ -89,6 +89,14 @@ func Start(c Config) {
 		b.Send(m.Chat, phrases[rand.Intn(len(phrases))])
 	})
 
+	b.Handle(tb.OnText, func(m *tb.Message) {
+		number := rand.Intn(10)
+
+		if number == 9 {
+			b.Send(m.Chat, phrases[rand.Intn(len(phrases))])
+		}
+	})
+
 	b.Start()
 }
 
